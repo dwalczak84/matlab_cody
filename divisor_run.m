@@ -18,7 +18,7 @@ Y = [];
 for i = 2:max(a)
     X = [X; ~rem(a,i)];
 end
-,for i = 1:size(X,1) 
+for i = 1:size(X,1) 
     Y = [Y; size(char(regexp(num2str(X(i,:),-6),'0','split')),2)];
 end
 
