@@ -15,8 +15,8 @@ if n == 0
     y = B;
 else
     for i = 2:n
+        B(i, 1) = B(i - 1, i - 1);
         for j = 2:i
-            B(i, 1) = B(i - 1, i - 1);
             B(i, j) = sum(B(i - 1:i, j - 1));
         end
     end
